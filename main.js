@@ -150,7 +150,6 @@ Eksempel 3: "   vanskelig        " skal returnere "gøy".
 
 function edit(text)
 {
-    let result;
     text = text.replace("vanskelig","gøy");
     text = text.trim();
     return text;
@@ -181,20 +180,23 @@ Steg 4: Kombiner alle elementene i arrayen til en enkelt string ved å bruke " |
 Ekstra utfordring: Lag et nytt array som kun inkluderer elementer som inneholder bokstaven "e".
 
 ******************************************************************************/
-
+//Steg 1:
 items.shift();
 console.log(items); //['Penn', 'Notatbok', 'Viskelær', 'Blyant', 'Markør']
 
+//Steg 2:
 let ind=items.indexOf('Viskelær');
 items.splice(ind,1,"Linjal")
 console.log(items); //['Penn', 'Notatbok', 'Linjal', 'Blyant', 'Markør']
 
+//Steg 3:
 items.splice(0,2,"Markeringspenn");
 console.log(items); //['Markeringspenn', 'Linjal', 'Blyant', 'Markør']
 
+//Steg 4:
 console.log(items.join(" | ")); // Markeringspenn | Linjal | Blyant | Markør
 
-
+//Ekstra utfordring:
 let newitems=[];
 for (let i=0 ; i<items.length ; i++)
 {
